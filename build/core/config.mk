@@ -1,5 +1,7 @@
 # Copyright (C) 2015 The CyanogenMod Project
 #
+# Modified for FireHound
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -24,5 +26,5 @@ FRAMEWORK_CM_PLATFORM_SYSTEM_API_FILE := $(TOPDIR)vendor/cmsdk/system-api/cm_sys
 FRAMEWORK_CM_PLATFORM_SYSTEM_REMOVED_API_FILE := $(TOPDIR)vendor/cmsdk/system-api/cm_system-removed.txt
 FRAMEWORK_CM_API_NEEDS_UPDATE_TEXT := $(TOPDIR)vendor/cm/build/core/apicheck_msg_current.txt
 
-BUILD_MAVEN_PREBUILT := $(TOP)/vendor/cm/build/core/maven_artifact.mk
-PUBLISH_MAVEN_PREBUILT := $(TOP)/vendor/cm/build/core/maven_artifact_publish.mk
+BUILD_MAVEN_PREBUILT := $(TOP)/vendor/firehound/build/core/maven_artifact.mk
+PUBLISH_MAVEN_PREBUILT := $(TOP)/vendor/firehound/build/core/maven_artifact_publish.mk

@@ -1,4 +1,4 @@
-# Theme engine
+# CyanogenMod Theme engine
 PRODUCT_PACKAGES += \
     aapt \
     ThemeChooser \

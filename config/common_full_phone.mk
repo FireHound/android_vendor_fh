@@ -1,21 +1,16 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common_full.mk)
+# Inherit common FireHound stuff
+$(call inherit-product, vendor/FireHound/config/common_full.mk)
 
-# Required CM packages
+# Required FireHound packages
 PRODUCT_PACKAGES += \
     LatinIME
 
-# Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+# Include FireHound LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/fh/overlay/dictionaries
 
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Helium.ogg
 
-ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-    PRODUCT_COPY_FILES += \
-        vendor/cm/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
-endif
-
-$(call inherit-product, vendor/cm/config/telephony.mk)
+$(call inherit-product, vendor/fh/config/telephony.mk)

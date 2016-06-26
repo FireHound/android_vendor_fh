@@ -1,12 +1,12 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common FIREHOUND stuff
+$(call inherit-product, vendor/fh/config/common.mk)
 
 PRODUCT_SIZE := full
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include FireHound audio files
+include vendor/fh/config/fh_audio.mk
 
-# Optional CM packages
+# Optional FireHound packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     PhotoPhase \
     Screencast
 
-# Extra tools in CM
+# Extra tools in FireHound
 PRODUCT_PACKAGES += \
     7z \
     lib7z \
