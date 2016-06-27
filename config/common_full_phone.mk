@@ -1,5 +1,5 @@
 # Inherit common FireHound stuff
-$(call inherit-product, vendor/FireHound/config/common_full.mk)
+$(call inherit-product, vendor/fh/config/common_full.mk)
 
 # Required FireHound packages
 PRODUCT_PACKAGES += \
