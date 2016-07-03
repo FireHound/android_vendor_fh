@@ -188,8 +188,8 @@ FH_VERSION_MAJOR = 1
 FH_VERSION_MINOR = 0
 
 # Release
-ifeq ($(CRDROID_RELEASE),true)
-    FH_VERSION := FireHound-BurntAss-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-$MILESTONE-$(shell date -u +%Y%m%d)-$(FH_BUILD)
+ifeq ($(FH_RELEASE),true)
+    FH_VERSION := FireHound-BurntAss-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-OFFICIAL-$(shell date -u +%Y%m%d)-$(FH_BUILD)
 else
 
 FH_VERSION := FireHound-BurntAss-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(FH_BUILD)
