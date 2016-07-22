@@ -43,9 +43,9 @@ PRODUCT_COPY_FILES += \
     
 # FireHound Addons
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/priv-app/CameraNextModv7/CameraNextModv7.apk:system/priv-app/CameraNextModv7/CameraNextModv7.apk \
-    vendor/cm/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so \
-    vendor/cm/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so \
+    vendor/fh/prebuilt/common/priv-app/CameraNextModv7/CameraNextModv7.apk:system/priv-app/CameraNextModv7/CameraNextModv7.apk \
+    vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so \
+    vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so \
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
