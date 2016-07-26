@@ -210,7 +210,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fh.display.version=$(FH_DISPLAY_VERSION)
 
--include vendor/crdroid-priv/keys/keys.mk
+-include vendor/fh-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
