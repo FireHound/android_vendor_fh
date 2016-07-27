@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/CameraNextModv7.apk:system/priv-app/CameraNextModv7/CameraNextModv7.apk \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so \
+    vendor/fh/prebuilt/common/app/AdAway.apk:system/priv-app/AdAway/AdAway.apk
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
@@ -224,7 +225,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
 FH_RELEASE = false
-FH_VERSION_MAJOR = 7
+FH_VERSION_MAJOR = 7.1
 FH_VERSION_MINOR = 1
 
 # Release
