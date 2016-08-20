@@ -47,6 +47,10 @@ PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so \
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/fh/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
@@ -90,9 +94,12 @@ include vendor/fh/config/cmsdk_common.mk
 
 # Required FireHound packages
 PRODUCT_PACKAGES += \
+    CMAudioService \
     Development \
     BluetoothExt \
-    Profiles
+    Profiles \
+    ThemeManagerService \
+    WeatherManagerService
 
 # Optional FireHound packages
 PRODUCT_PACKAGES += \
@@ -142,6 +149,16 @@ PRODUCT_PACKAGES += \
     strace \
     pigz
 
+# Custom off-mode charger
+ifneq ($(WITH_CM_CHARGER),false)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    cm_charger_res_images \
+    font_log.png \
+    libhealthd.cm
+endif
+
+# ExFAT support
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
 TARGET_USES_EXFAT := true
