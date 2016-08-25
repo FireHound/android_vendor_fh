@@ -224,6 +224,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.fh.version=$(FH_VERSION) \
   ro.modversion=$(FH_VERSION)
 
+ifeq ($(OTA_PACKAGE_SIGNING_KEY),)
+    PRODUCT_EXTRA_RECOVERY_KEYS += \
+        vendor/fh/build/target/product/security/fh \
+        vendor/fh/build/target/product/security/fh-devkey
+endif
+
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fh.display.version=$(FH_DISPLAY_VERSION)
 
@@ -234,4 +240,3 @@ ro.fh.display.version=$(FH_DISPLAY_VERSION)
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
-
