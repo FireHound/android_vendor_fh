@@ -125,6 +125,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
+    OmniSwitch \
     DataUsageProvider \
     WallpaperPicker
 
