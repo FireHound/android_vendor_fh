@@ -69,3 +69,9 @@ PRODUCT_BOOT_JARS += \
     ro.config.notification_sound=Duet.ogg \
     ro.config.alarm_alert=Sunshower.ogg \
     ro.config.ringtone=The_big_adventure.ogg
+
+# MTP DIRTY HACK
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.service.adb.enable=1
