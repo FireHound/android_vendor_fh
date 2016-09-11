@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= fh	
+PRODUCT_BRAND ?= fh
 
 PRODUCT_BOOTANIMATION := vendor/fh/prebuilt/common/bootanimation/bootanimation.zip
 
@@ -89,16 +89,18 @@ PRODUCT_COPY_FILES += \
 # Theme engine
 include vendor/fh/config/themes_common.mk
 
+ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
 include vendor/fh/config/cmsdk_common.mk
+endif
 
 # Required FireHound packages
 PRODUCT_PACKAGES += \
-    CMAudioService \
-    Development \
     BluetoothExt \
+    CMAudioService \
+    CMParts \
+    Development \
     Profiles \
-    ThemeManagerService \
     WeatherManagerService
 
 # Optional FireHound packages
@@ -125,7 +127,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
-    OmniSwitch \
     DataUsageProvider \
     WallpaperPicker
 
@@ -184,14 +185,14 @@ PRODUCT_PACKAGES += \
     rsync
 
 # Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
+#PRODUCT_PACKAGES += \
+#    libffmpeg_extractor \
+#    libffmpeg_omx \
+#    media_codecs_ffmpeg.xml
+#
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    media.sf.omx-plugin=libffmpeg_omx.so \
+#    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -208,7 +209,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
 FH_RELEASE = false
-FH_VERSION_MAJOR = 2
+FH_VERSION_MAJOR = 1
 FH_VERSION_MINOR = 0
 
 # Release
@@ -231,7 +232,7 @@ ro.fh.display.version=$(FH_DISPLAY_VERSION)
 -include vendor/fh-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
-
+-include vendor/cm/config/partner_gms.mk
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
