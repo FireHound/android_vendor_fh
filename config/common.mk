@@ -220,7 +220,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
 FH_RELEASE = false
-FH_VERSION_MAJOR = 7.0
+FH_VERSION_MAJOR = 7.1
 FH_VERSION_MINOR = 0
 
 # Release
