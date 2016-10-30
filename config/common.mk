@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     CMParts \
     Development \
     Profiles \
+    ThemeManagerService \
     WeatherManagerService
 
 # Optional FireHound packages
@@ -219,9 +220,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
-FH_RELEASE = false
-FH_VERSION_MAJOR = 7.1
-FH_VERSION_MINOR = 0
+FH_RELEASE = true
+FH_VERSION_MAJOR = 7
+FH_VERSION_MINOR = 1
 
 # Release
 ifeq ($(FH_RELEASE),true)
