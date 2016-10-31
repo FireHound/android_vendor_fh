@@ -220,7 +220,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
-FH_RELEASE = true
+FH_RELEASE = false
 FH_VERSION_MAJOR = 7
 FH_VERSION_MINOR = 1
 
