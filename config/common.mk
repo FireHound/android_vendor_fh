@@ -106,7 +106,6 @@ PRODUCT_PACKAGES += \
     CMParts \
     Development \
     Profiles \
-    ThemeManagerService \
     WeatherManagerService
 
 # Optional FireHound packages
@@ -132,7 +131,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
-    DataUsageProvider \
     WallpaperPicker
 
 # Exchange support
