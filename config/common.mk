@@ -215,6 +215,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# OMS MASQUERADE
+PRODUCT_PACKAGES += \
+    masquerade
+
+# OMS Verified
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
+
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
@@ -229,7 +237,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
-FH_RELEASE = false
+FH_RELEASE = true
 FH_VERSION_MAJOR = 7
 FH_VERSION_MINOR = 1
 
