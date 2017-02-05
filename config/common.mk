@@ -127,10 +127,6 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider \
     WallpaperPicker
-    LockClock \
-    Trebuchet \
-    WallpaperPicker \
-    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
