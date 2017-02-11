@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMFileManager \
     CMSettingsProvider \
-    CyanogenSetupWizard \
+    LineageSetupWizard \
     Eleven \
     LockClock \
     CyanogenSetupWizard \
