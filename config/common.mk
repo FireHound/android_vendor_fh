@@ -39,7 +39,7 @@ PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/fh/prebuilt/common/bin/50-fh.sh:system/addon.d/50-fh.sh \
     vendor/fh/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-    
+
 # FireHound Addons
 PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/CameraNextModv7.apk:system/priv-app/CameraNextModv7/CameraNextModv7.apk \
@@ -237,7 +237,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # FireHound version
-FH_RELEASE = true
+FH_RELEASE = false
 FH_VERSION_MAJOR = 7
 FH_VERSION_MINOR = 1
 
