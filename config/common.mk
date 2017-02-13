@@ -117,12 +117,14 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
     AudioFX \
-    CMWallpapers \
     CMFileManager \
+    CMSettingsProvider \
+    CyanogenSetupWizard \
     Eleven \
     LockClock \
     CyanogenSetupWizard \
     CMSettingsProvider \
+    OmniSwitch \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
