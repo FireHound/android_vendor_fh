@@ -1,6 +1,8 @@
 PRODUCT_BRAND ?= fh
 
-PRODUCT_BOOTANIMATION := vendor/fh/prebuilt/common/bootanimation/bootanimation.zip
+# BootAnimation
+PRODUCT_COPY_FILES += \
+    vendor/fh/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -125,6 +127,7 @@ PRODUCT_PACKAGES += \
     CyanogenSetupWizard \
     CMSettingsProvider \
     OmniSwitch \
+    OmniStyle \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
@@ -224,6 +227,13 @@ PRODUCT_PACKAGES += \
 # OMS Verified
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.substratum.verified=true
+
+#DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
