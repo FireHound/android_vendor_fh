@@ -220,9 +220,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# OMS MASQUERADE
+# OMS ThemeInterfacer
 PRODUCT_PACKAGES += \
-    masquerade
+    ThemeInterfacer
 
 # OMS Verified
 PRODUCT_PROPERTY_OVERRIDES := \
