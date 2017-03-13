@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     CyanogenSetupWizard \
     CMSettingsProvider \
+    OmniJaws \
     OmniSwitch \
     OmniStyle \
     ExactCalculator \
