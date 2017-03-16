@@ -48,9 +48,10 @@ PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so \
 
-# Backup Services whitelist
+# System feature whitelists
 PRODUCT_COPY_FILES += \
-    vendor/fh/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/fh/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
+    vendor/fh/config/permissions/power-whitelist.xml:system/etc/sysconfig/power-whitelist.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
