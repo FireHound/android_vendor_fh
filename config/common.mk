@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_mosaic_next.so \
     vendor/fh/prebuilt/common/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so:system/priv-app/CameraNextModv7/lib/arm/libjni_tinyplanet_next.so \
 
+# Turbo Apk
+PRODUCT_COPY_FILES += \
+    vendor/fh/prebuilt/common/priv-app/Turbo/Turbo.apk:system/priv-app/Turbo/Turbo.apk \
+
 # System feature whitelists
 PRODUCT_COPY_FILES += \
     vendor/fh/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
