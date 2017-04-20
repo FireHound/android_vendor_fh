@@ -131,6 +131,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     OmniStyle \
     ExactCalculator \
+    Jelly \
     LiveLockScreenService \
     WeatherProvider \
     WallpaperPicker \
