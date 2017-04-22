@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
-    WallpaperPicker
+    WallpaperPicker \
+    OTAUpdates
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -274,6 +275,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fh.display.version=$(FH_DISPLAY_VERSION)
+
+ifeq ($(FH_RELEASE),true)
+    PRODUCT_PROPERTY_OVERRIDES += \
+        persist.ota.romname=$(TARGET_PRODUCT) \
+        persist.ota.version=$(shell date +%Y%m%d) \
+        persist.ota.manifest=https://raw.githubusercontent.com/FireHound/platform_vendor_ota/7.1/$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3).xml
+endif
 
 -include vendor/fh-priv/keys/keys.mk
 
