@@ -52,6 +52,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/priv-app/Turbo/Turbo.apk:system/priv-app/Turbo/Turbo.apk \
 
+# Pixel Launcher
+PRODUCT_COPY_FILES += \
+    vendor/fh/prebuilt/common/priv-app/PixelLauncher/PixelLauncher.apk:system/priv-app/PixelLauncher/PixelLauncher.apk \
+
 # System feature whitelists
 PRODUCT_COPY_FILES += \
     vendor/fh/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
@@ -131,7 +135,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     CyanogenSetupWizard \
     CMSettingsProvider \
-    OmniJaws \
     OmniSwitch \
     OmniStyle \
     ExactCalculator \
