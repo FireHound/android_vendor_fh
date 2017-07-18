@@ -104,6 +104,11 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 include vendor/fh/config/cmsdk_common.mk
 endif
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/cm/config/twrp.mk
+endif
+
 # Required FireHound packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
