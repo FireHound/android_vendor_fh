@@ -34,7 +34,12 @@ else
     ro.device.cache_dir=/cache
 endif
 
-# Backup Tool
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
+# Backup tool
 PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/fh/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
