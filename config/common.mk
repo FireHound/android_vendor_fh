@@ -134,6 +134,11 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # Launcher3
 PRODUCT_PACKAGES += \
     Launcher3
