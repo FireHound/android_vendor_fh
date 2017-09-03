@@ -46,3 +46,7 @@ PRODUCT_PACKAGES += \
     CameraNextMod \
     Chromium \
     SettingsDarkThemeOverlay
+
+# Default Theme
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
