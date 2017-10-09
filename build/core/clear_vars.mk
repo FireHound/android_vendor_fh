@@ -1,5 +1,5 @@
 #
-# Lineage-specific variable clears
+# FireHound-specific variable clears
 #
 LOCAL_IGNORE_SUBDIR :=
 

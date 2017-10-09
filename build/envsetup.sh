@@ -1,4 +1,4 @@
-function __print_lineage_functions_help() {
+function __print_fh_functions_help() {
 cat <<EOF
 Additional LineageOS functions:
 - cout:            Changes directory to out.
@@ -67,10 +67,10 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    LINEAGE_DEVICES_ONLY="true"
+    FH_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/lineage/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/fh/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -86,12 +86,12 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the Lineage model name
+            # This is probably just the FireHound model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
 
-            lunch lineage_$target-$variant
+            lunch fh_$target-$variant
         fi
     fi
     return $?
@@ -102,8 +102,8 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        MODVERSION=$(get_build_var LINEAGE_VERSION)
-        ZIPFILE=lineage-$MODVERSION.zip
+        MODVERSION=$(get_build_var FH_VERSION)
+        ZIPFILE=$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
@@ -118,7 +118,7 @@ function eat()
             done
             echo "Device Found.."
         fi
-        if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD"); then
+        if (adb shell getprop ro.fh.device | grep -q "$FH_BUILD"); then
             # if adbd isn't root we can't write to /cache/recovery/
             adb root
             sleep 1
@@ -134,7 +134,7 @@ EOF
             fi
             rm /tmp/command
         else
-            echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+            echo "The connected device does not appear to be $FH_BUILD, run away!"
         fi
         return $?
     else
@@ -346,7 +346,7 @@ function installboot()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 > /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD");
+    if (adb shell getprop ro.fh.device | grep -q "$FH_BUILD");
     then
         adb push $OUT/boot.img /cache/
         if [ -e "$OUT/system/lib/modules/*" ];
@@ -360,7 +360,7 @@ function installboot()
         adb shell dd if=/cache/boot.img of=$PARTITION
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+        echo "The connected device does not appear to be $FH_BUILD, run away!"
     fi
 }
 
@@ -394,13 +394,13 @@ function installrecovery()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 >> /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD");
+    if (adb shell getprop ro.fh.device | grep -q "$FH_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+        echo "The connected device does not appear to be $FH_BUILD, run away!"
     fi
 }
 
@@ -778,7 +778,7 @@ function dopush()
         echo "Device Found."
     fi
 
-    if (adb shell getprop ro.lineage.device | grep -q "$LINEAGE_BUILD") || [ "$FORCE_PUSH" = "true" ];
+    if (adb shell getprop ro.fh.device | grep -q "$FH_BUILD") || [ "$FORCE_PUSH" = "true" ];
     then
     # retrieve IP and PORT info if we're using a TCP connection
     TCPIPPORT=$(adb devices \
@@ -896,7 +896,7 @@ EOF
     rm -f $OUT/.log
     return 0
     else
-        echo "The connected device does not appear to be $LINEAGE_BUILD, run away!"
+        echo "The connected device does not appear to be $FH_BUILD, run away!"
     fi
 }
 
@@ -909,13 +909,13 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/lineage/build/tools/repopick.py $@
+    $T/vendor/fh/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
-    if [ ! -z $LINEAGE_FIXUP_COMMON_OUT ]; then
+    if [ ! -z $FH_FIXUP_COMMON_OUT ]; then
         if [ -d ${common_out_dir} ] && [ ! -L ${common_out_dir} ]; then
             mv ${common_out_dir} ${common_out_dir}-${target_device}
             ln -s ${common_out_dir}-${target_device} ${common_out_dir}
