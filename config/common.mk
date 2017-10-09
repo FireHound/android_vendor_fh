@@ -227,34 +227,14 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
-# FireHound version
-FH_VERSION_MAJOR = 4
-FH_VERSION_MINOR = 0
-
-# Release
-ifeq ($(FH_RELEASE),true)
-    FH_VERSION := FireHound-OFFICIAL-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(FH_BUILD)
-else
-    FH_VERSION := FireHound-Unofficial-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(FH_BUILD)
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fh.version=$(FH_VERSION) \
-    ro.fh.build.version=$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR) \
-    ro.modversion=$(FH_VERSION) \
-
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/fh/build/target/product/security/fh
 
 -include vendor/fh-priv/keys/keys.mk
-
-FH_DISPLAY_VERSION := $(FH_VERSION)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fh.display.version=$(FH_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/fh/config/partner_gms.mk
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product, vendor/fh/config/firehound.mk)
