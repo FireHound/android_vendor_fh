@@ -24,9 +24,9 @@ FH_VERSION_MINOR := 0
 
 # Release
 ifeq ($(FH_RELEASE),true)
-    FH_VERSION := OFFICIAL-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(FH_BUILD)
+    FH_VERSION := $(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-OFFICIAL-$(shell date -u +%Y%m%d)-$(FH_BUILD)
 else
-    FH_VERSION := UNOFFICIAL-$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(FH_BUILD)
+    FH_VERSION := $(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-UNOFFICIAL-$(shell date -u +%Y%m%d)-$(FH_BUILD)
 endif
 
 # Extras
