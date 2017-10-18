@@ -135,9 +135,12 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly \
     LockClock \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider
+
+# Launcher3
+PRODUCT_PACKAGES += \
+    Launcher3
 
 # Exchange support
 PRODUCT_PACKAGES += \
