@@ -102,10 +102,6 @@ ifeq ($(WITH_TWRP),true)
 include vendor/fh/config/twrp.mk
 endif
 
-# Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
-
 # Required Lineage packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
