@@ -59,3 +59,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
+
+# Default ringtone & notifications
+    ro.config.notification_sound=Duet.ogg \
+    ro.config.alarm_alert=Sunshower.ogg \
+    ro.config.ringtone=The_big_adventure.ogg
