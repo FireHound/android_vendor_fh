@@ -87,7 +87,8 @@ PRODUCT_COPY_FILES += \
 
 # This is FireHound!
 PRODUCT_COPY_FILES += \
-    vendor/fh/config/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml
+    vendor/fh/config/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
+    vendor/fh/config/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml
 
 # Include FireHound audio files
 include vendor/fh/config/fh_audio.mk
