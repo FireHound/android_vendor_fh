@@ -44,4 +44,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Custom FireHound Packages
 PRODUCT_PACKAGES += \
     CameraNextMod \
-    Chromium
+    Chromium \
+    SettingsDarkThemeOverlay
