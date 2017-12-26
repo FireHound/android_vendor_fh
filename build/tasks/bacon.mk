@@ -22,4 +22,15 @@ FIREHOUND_TARGET_PACKAGE := $(PRODUCT_OUT)/FireHound-$(FH_VERSION).zip
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(FIREHOUND_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(FIREHOUND_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(FIREHOUND_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(FIREHOUND_TARGET_PACKAGE)" >&2
+	@echo "Build done!"
+	@echo "███████╗██╗██████╗ ███████╗██╗  ██╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗ "
+	@echo "██╔════╝██║██╔══██╗██╔════╝██║  ██║██╔═══██╗██║   ██║████╗  ██║██╔══██╗"
+	@echo "█████╗  ██║██████╔╝█████╗  ███████║██║   ██║██║   ██║██╔██╗ ██║██║  ██║"
+	@echo "██╔══╝  ██║██╔══██╗██╔══╝  ██╔══██║██║   ██║██║   ██║██║╚██╗██║██║  ██║"
+	@echo "██║     ██║██║  ██║███████╗██║  ██║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝"
+	@echo "╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ "
+	@echo -e ${CL_RED}"======================================================================="${CL_DEF}
+	@echo "Package :  $(FIREHOUND_TARGET_PACKAGE)"
+	@echo "MD5     : " `cat $(FIREHOUND_TARGET_PACKAGE).md5sum | awk '{print $$1}' `
+	@echo "Size    : " `du -sh $(FIREHOUND_TARGET_PACKAGE) | awk '{print $$1}' `
+	@echo -e ${CL_RED}"======================================================================="${CL_DEF}
