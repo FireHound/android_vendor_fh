@@ -42,8 +42,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.fh.display.version=$(FH_DISPLAY_VERSION)
 
 # Custom FireHound Packages
+ifeq ($(WITH_SNAP),true
+    PRODUCT_PACKAGES += Snap
+else
+    PRODUCT_PACKAGES += CameraNextMod
+endif
 PRODUCT_PACKAGES += \
-    CameraNextMod \
     Chromium \
     SettingsDarkThemeOverlay
 
