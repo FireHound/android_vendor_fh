@@ -45,6 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     CameraNextMod \
     Chromium \
+    OmniJaws \
     SettingsDarkThemeOverlay
 
 # Default Theme
@@ -57,3 +58,4 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
+
