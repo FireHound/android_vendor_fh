@@ -45,6 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     CameraNextMod \
     Chromium \
+    OmniJaws \
     SettingsDarkThemeOverlay
 
 # Default Theme
