@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+ifneq ($(DISABLE_CNM),true)
+
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -43,3 +45,5 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/priv-app/CameraNextMod/lib/arm/
 include $(BUILD_PREBUILT)
+
+endif
