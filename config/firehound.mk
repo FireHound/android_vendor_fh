@@ -43,11 +43,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Custom FireHound Packages
 PRODUCT_PACKAGES += \
-    CameraNextMod \
     Chromium \
     OmniJaws \
     SettingsDarkThemeOverlay \
     Essentials
+
+# Camera
+ifneq ($(DISABLE_CNM),true)
+PRODUCT_PACKAGES += CameraNextMod
+endif
 
 # Default Theme
 PRODUCT_PROPERTY_OVERRIDES += \
