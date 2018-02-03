@@ -46,7 +46,8 @@ PRODUCT_PACKAGES += \
     Chromium \
     OmniJaws \
     SettingsDarkThemeOverlay \
-    Essentials
+    Essentials \
+    OmniStyle
 
 # Camera
 ifneq ($(DISABLE_CNM),true)
