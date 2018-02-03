@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
     Chromium \
     OmniJaws \
     SettingsDarkThemeOverlay \
-    Essentials
+    Essentials \
+    OmniStyle
 
 # Default Theme
 PRODUCT_PROPERTY_OVERRIDES += \
