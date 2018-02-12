@@ -56,7 +56,7 @@ endif
 
 # Default Theme
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
+    ro.boot.vendor.overlay.theme=org.lineageos.overlay.accent.blue
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
