@@ -2,3 +2,4 @@ for combo in $(curl -s https://raw.githubusercontent.com/LineageOS/hudson/master
 do
     add_lunch_combo $combo
 done
+add_lunch_combo fh_potter-userdebug
