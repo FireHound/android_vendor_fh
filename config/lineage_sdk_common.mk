@@ -4,6 +4,7 @@ PRODUCT_COPY_FILES += \
     vendor/fh/config/permissions/org.lineageos.livedisplay.xml:system/etc/permissions/org.lineageos.livedisplay.xml \
     vendor/fh/config/permissions/org.lineageos.performance.xml:system/etc/permissions/org.lineageos.performance.xml \
     vendor/fh/config/permissions/org.lineageos.profiles.xml:system/etc/permissions/org.lineageos.profiles.xml \
+    vendor/fh/config/permissions/org.lineageos.style.xml:system/etc/permissions/org.lineageos.style.xml \
     vendor/fh/config/permissions/org.lineageos.weather.xml:system/etc/permissions/org.lineageos.weather.xml
 
 # Lineage Platform Library
