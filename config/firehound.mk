@@ -43,7 +43,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Custom FireHound Packages
 PRODUCT_PACKAGES += \
-    Chromium \
+    ViaBrowser \
     OmniJaws \
     SettingsDarkThemeOverlay \
     Essentials \
