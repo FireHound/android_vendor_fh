@@ -30,7 +30,7 @@ else
 endif
 
 # Extras
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.fh.version=$(FH_VERSION) \
     ro.fh.build.version=$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR) \
     ro.modversion=$(FH_VERSION) \
@@ -38,7 +38,7 @@ PRODUCT_GENERIC_PROPERTIES += \
 # Display ID
 FH_DISPLAY_VERSION := $(FH_VERSION)
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.fh.display.version=$(FH_DISPLAY_VERSION)
 
 # Custom FireHound Packages
@@ -55,7 +55,7 @@ PRODUCT_PACKAGES += CameraNextMod
 endif
 
 # Default Theme
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
 
 # DU Utils Library
