@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
 # Extra tools in FireHound
 PRODUCT_PACKAGES += \
     7z \
+    awk \
     bash \
     bzip2 \
     curl \
