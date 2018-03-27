@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Copy all FireHound-specific init rc files
-$(foreach f,$(wildcard vendor/lineage/prebuilt/common/etc/init/*.rc),\
+$(foreach f,$(wildcard vendor/fh/prebuilt/common/etc/init/*.rc),\
        $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 
