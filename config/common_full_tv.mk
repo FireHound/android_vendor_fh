@@ -3,4 +3,4 @@ $(call inherit-product, vendor/fh/config/common_full.mk)
 
 PRODUCT_PACKAGES += TvSettings
 
-DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/tv
+DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/tv
