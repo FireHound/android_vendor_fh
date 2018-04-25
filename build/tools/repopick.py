@@ -144,7 +144,7 @@ def fetch_query(remote_url, query):
 
 if __name__ == '__main__':
     # Default to FireHound Gerrit
-    default_gerrit = 'https://review.firehound.me'
+    default_gerrit = 'https://review.firehound.org'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking
