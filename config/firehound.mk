@@ -20,7 +20,7 @@ PRODUCT_VERSION_MINOR = 0
 
 # Custom FireHound Version
 FH_VERSION_MAJOR := 4
-FH_VERSION_MINOR := 4
+FH_VERSION_MINOR := 5
 
 # Release
 ifeq ($(FH_RELEASE),true)
