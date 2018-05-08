@@ -252,7 +252,6 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/fh/config/partner_gms.mk
--include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product, vendor/fh/config/firehound.mk)
