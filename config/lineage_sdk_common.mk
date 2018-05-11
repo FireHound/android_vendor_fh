@@ -38,12 +38,3 @@ ifndef LINEAGE_PLATFORM_REV
   # If you are doing a release and this is NOT 0, you are almost certainly doing it wrong
   LINEAGE_PLATFORM_REV := 0
 endif
-
-# LineageOS Platform SDK Version
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.lineage.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
-
-# LineageOS Platform Internal
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.lineage.build.version.plat.rev=$(CM_PLATFORM_REV)
-
