@@ -30,7 +30,7 @@ else
 endif
 
 # Extras
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+ADDITIONAL_BUILD_PROPERTIES += \
     ro.fh.version=$(FH_VERSION) \
     ro.fh.build.version=$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR) \
     ro.modversion=$(FH_VERSION) \
@@ -38,7 +38,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Display ID
 FH_DISPLAY_VERSION := $(FH_VERSION)
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+ADDITIONAL_BUILD_PROPERTIES += \
     ro.fh.display.version=$(FH_DISPLAY_VERSION)
 
 # Custom FireHound Packages
