@@ -151,7 +151,7 @@ PRODUCT_PACKAGES += \
     LineageOrangeAccent \
     LineagePinkAccent \
     LineagePurpleAccent \
-    LineageRedAccent \
+    LineageDemonAccent \
     LineageYellowAccent
 
 # Extra tools in FireHound
