@@ -233,6 +233,10 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank
 
+# Setup Wizard is some buggy shit
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.rotation_locked=true
+
 # Conditionally build in su
 ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
