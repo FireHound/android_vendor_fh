@@ -248,6 +248,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+# Setup Wizard is some buggy shit
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.rotation_locked=true
+
 # Conditionally build in su
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
