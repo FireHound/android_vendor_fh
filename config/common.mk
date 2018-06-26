@@ -132,7 +132,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     LineageSettingsProvider \
-    Eleven \
     ExactCalculator \
     LockClock \
     WallpaperPicker \
