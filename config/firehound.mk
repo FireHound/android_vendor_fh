@@ -26,7 +26,11 @@ FH_VERSION_MINOR := 7
 ifeq ($(FH_RELEASE),true)
     FH_VERSION := $(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-OFFICIAL-$(shell date -u +%Y%m%d)-$(FH_BUILD)
 else
-    FH_VERSION := $(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-UNOFFICIAL-$(shell date -u +%Y%m%d)-$(FH_BUILD)
+    ifeq ($(FH_WEEKLY),true)
+        FH_VERSION := $(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-WEEKLY-$(shell date -u +%Y%m%d)-$(FH_BUILD)
+    else
+        FH_VERSION := $(FH_VERSION_MAJOR).$(FH_VERSION_MINOR)-UNOFFICIAL-$(shell date -u +%Y%m%d)-$(FH_BUILD)
+    endif
 endif
 
 # Extras
