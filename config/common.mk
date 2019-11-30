@@ -138,8 +138,8 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 # AOSP packages
 PRODUCT_PACKAGES += \
