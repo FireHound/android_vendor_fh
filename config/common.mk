@@ -30,8 +30,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/fh/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/fh/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/fh/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh \
-    vendor/fh/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
+    vendor/fh/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
