@@ -6,10 +6,10 @@ endif
 
 # LineageOS System Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.lineage.version=$(FIREHOUND_VERSION) \
+    ro.lineage.version=$(FH_VERSION) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(FIREHOUND_VERSION) \
+    ro.lineage.build.version=$(FH_VERSION_MAJOR).$(FH_VERSION_MINOR) \
+    ro.modversion=$(FH_VERSION) \
     ro.lineagelegal.url=https://lineageos.org/legal
 
 # LineageOS Platform Display Version
