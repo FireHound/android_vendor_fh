@@ -159,6 +159,8 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard \
     Eleven \
     LockClock \
+    Longshot \
+    OmniStyle \
     Profiles \
     TrebuchetQuickStep \
     Updater \
