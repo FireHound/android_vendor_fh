@@ -126,12 +126,12 @@ case "$1" in
     mount_system
     mkdir -p $C
     if check_prereq; then
-        if check_whitelist $S; then
+        if check_whitelist system; then
             unmount_system
             exit 127
         fi
     fi
-    check_blacklist $S
+    check_blacklist system
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
