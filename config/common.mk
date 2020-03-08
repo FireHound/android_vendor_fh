@@ -147,6 +147,7 @@ PRODUCT_COPY_FILES += \
 
 # AOSP packages
 PRODUCT_PACKAGES += \
+    Email \
     ExactCalculator \
     Exchange2 \
     Terminal
