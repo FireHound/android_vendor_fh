@@ -278,7 +278,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/fh/overlay/common
 
 # Custom FireHound Version
 FH_VERSION_MAJOR := 5
-FH_VERSION_MINOR := 1
+FH_VERSION_MINOR := 2
 
 # Release
 ifeq ($(FH_RELEASE),true)
