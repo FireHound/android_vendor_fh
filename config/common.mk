@@ -136,7 +136,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
-    LineageSetupWizard
+    LineageSetupWizard \
+    OmniJaws
 
 # Themes
 PRODUCT_PACKAGES += \
