@@ -152,7 +152,9 @@ PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
     LineageSetupWizard \
-    OmniJaws
+    Longshot \
+    OmniJaws \
+    OmniStyle
 
 # Themes
 PRODUCT_PACKAGES += \
@@ -245,7 +247,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Custom FireHound Version
 FH_VERSION_MAJOR := 5
-FH_VERSION_MINOR := 2
+FH_VERSION_MINOR := 4
 
 # Release
 ifeq ($(FH_RELEASE),true)
