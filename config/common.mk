@@ -152,9 +152,9 @@ PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
     LineageSetupWizard \
-    Longshot \
     OmniJaws \
-    OmniStyle
+    OmniStyle \
+    StitchImage
 
 # Themes
 PRODUCT_PACKAGES += \
