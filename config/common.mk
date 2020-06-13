@@ -246,8 +246,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # Custom FireHound Version
-FH_VERSION_MAJOR := 5
-FH_VERSION_MINOR := 4
+FH_VERSION_MAJOR := 4
+FH_VERSION_MINOR := 6
 
 # Release
 ifeq ($(FH_RELEASE),true)
