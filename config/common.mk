@@ -247,7 +247,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Custom FireHound Version
 FH_VERSION_MAJOR := 4
-FH_VERSION_MINOR := 6
+FH_VERSION_MINOR := 7
 
 # Release
 ifeq ($(FH_RELEASE),true)
