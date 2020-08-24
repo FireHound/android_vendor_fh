@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard \
     OmniJaws \
     OmniStyle \
+    Safaya \
     StitchImage
 
 # Themes
